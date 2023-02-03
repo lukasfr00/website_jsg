@@ -15,6 +15,8 @@ app.use(cors())
 app.use(express.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
+//Neuigkeiten
+
 app.get("/api/get_news", (req, res)=> {
     const sqlSelect = "SELECT * FROM news"
 
@@ -44,16 +46,12 @@ app.post("/api/add_news", (req, res) => {
     })
 })
 
-app.put("/api/edit_news", (req, res)=>{
+app.delete("/api/delete_news/:id", (req, res)=>{
+    const id = req.params.id
 
-    const id = req.body.id
-    const title = req.body.title
-    const text = req.body.text
-    const image = req.body.image
+    const sqlDelete = "DELETE FROM news WHERE id = ?"
 
-    const sqlEdit = "UPDATE SET news (title, text, img_url) VALUES (?, ?, ?) WHERE id = ?"
-
-    db.query(sqlEdit, [title, text, image, id], (err, result) => {
+    db.query(sqlDelete, id, (err, result) => {
         if(err){
             console.log(err)
         } else {
@@ -62,10 +60,41 @@ app.put("/api/edit_news", (req, res)=>{
     })
 })
 
-app.delete("/api/delete_news/:id", (req, res)=>{
+//Termine
+
+app.get("/api/get_dates", (req, res)=> {
+    const sqlSelect = "SELECT * FROM dates"
+
+    db.query(sqlSelect, (err, result) => {
+        if(err){
+            console.log(err)
+        } else {
+            res.send(result)
+        }
+    })
+})
+
+app.post("/api/add_date", (req, res) => {
+
+    const title = req.body.title
+    const text = req.body.text
+    const date = req.body.date
+
+    const sqlInsert = "INSERT INTO dates (date, title, text) VALUES (?, ?, ?)"
+
+    db.query(sqlInsert, [date, title, text], (err, result) => {
+        if(err){
+            console.log(err)
+        } else {
+            console.log(result)
+        }
+    })
+})
+
+app.delete("/api/delete_date/:id", (req, res)=>{
     const id = req.params.id
 
-    const sqlDelete = "DELETE FROM news WHERE id = ?"
+    const sqlDelete = "DELETE FROM dates WHERE id = ?"
 
     db.query(sqlDelete, id, (err, result) => {
         if(err){
