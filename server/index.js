@@ -105,6 +105,56 @@ app.delete("/api/delete_date/:id", (req, res)=>{
     })
 })
 
+//Teams
+
+app.get("/api/get_teams", (req, res)=> {
+    const sqlSelect = "SELECT * FROM teams"
+
+    db.query(sqlSelect, (err, result) => {
+        if(err){
+            console.log(err)
+        } else {
+            res.send(result)
+        }
+    })
+})
+
+app.post("/api/add_team", (req, res) => {
+
+    const jugend = req.body.jugend
+    const teamName = req.body.teamName
+    const teamFoto = req.body.teamFoto
+    const infotext = req.body.infotext
+    const trainer = req.body.trainer
+    const trainerMail = req.body.trainerMail
+    const trainerTelefon = req.body.trainerTelefon
+    const trainerFoto = req.body.trainerFoto
+
+    const sqlInsert = "INSERT INTO teams (jugend, teamName, teamFoto, infotext, trainer, trainerMail, trainerTelefon, trainerFoto) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+
+    db.query(sqlInsert, [jugend, teamName, teamFoto, infotext, trainer, trainerMail, trainerTelefon, trainerFoto], (err, result) => {
+        if(err){
+            console.log(err)
+        } else {
+            console.log(result)
+        }
+    })
+})
+
+app.delete("/api/delete_team/:id", (req, res)=>{
+    const id = req.params.id
+
+    const sqlDelete = "DELETE FROM teams WHERE id = ?"
+
+    db.query(sqlDelete, id, (err, result) => {
+        if(err){
+            console.log(err)
+        } else {
+            console.log(result)
+        }
+    })
+})
+
 app.listen(3006, () => {
     console.log("running on port 3006")
 })
