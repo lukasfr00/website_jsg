@@ -1,0 +1,22 @@
+.container {
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: #2c5729;
+    margin: 0;
+}
+
+/*Responsive*/
+
+@media (min-width: 750px) {
+    button {
+        cursor: pointer;
+    }
+}

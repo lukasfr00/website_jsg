@@ -1,0 +1,158 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.arrowBack {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    color: #2c5729;
+    font-size: 24px;
+    padding: 0;
+}
+
+.image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.divide {
+    width: 90%;
+    height: 1px;
+    background: #2c5729;
+    margin-bottom: 20px;
+}
+
+.productInfos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.productInfos h2 {
+    text-align: center;
+}
+
+.productInfos p {
+    text-align: justify;
+}
+
+.selectSize{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.sizeLabel {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: 1px solid #2c5729;
+    color: #2c5729;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sizeLabel i {
+    font-size: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-shadow: -1px 0px 0px 0px #2c5729, 1px 0px 0px 0px #2c5729;
+}
+
+.sizeOption {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #1d3b1c;
+    background: transparent;
+    color: #2c5729;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 40px;
+    background: #2c5729;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.price i {
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.notification {
+    border: solid 1px black;
+    position: fixed;
+    top: 15vh;
+    left: -1px;
+    padding: 0 20px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.notification p {
+    text-align: left!important;
+}
+
+.notification button {
+    background: darkred;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    width: 40px;
+    height: 35px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Responsive*/
+
+@media (min-width: 750px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .divide {
+        width: 1px;
+        height: 50vh;
+        margin: 0 6vw;
+    }
+
+    .productInfos p {
+        text-align: justify;
+    }
+}

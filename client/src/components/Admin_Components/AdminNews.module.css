@@ -1,0 +1,93 @@
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.header {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.back {
+    width: 20%;
+    text-decoration: none;
+    color: #1d3b1c;
+    font-size: 24px;
+}
+
+.header h1 {
+    width: 60%;
+    text-align: center;
+}
+
+.add {
+    width: 20%;
+    background: #2c5729;
+    color: white;
+    border: none;
+    height: 30px;
+}
+
+.delete {
+    background: #2c5729;
+    color: white;
+    border: none;
+    height: 30px;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    border: solid 1px #1d3b1c;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.form label {
+    width: 70%;
+    text-align: start;
+}
+
+.form input {
+    width: 70%;
+    height: 25px;
+    margin: 0 0 20px 0;
+}
+
+.form textarea {
+    min-width: 70%;
+    max-width: 70%;
+    min-height: 120px;
+    margin: 0 0 20px 0;
+}
+
+.form .submit {
+    width: 20%;
+    background: #2c5729;
+    color: white;
+    border: none;
+    height: 40px;
+}
+
+.newsBoxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    gap: 15px;
+}
+
+.newsCard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}

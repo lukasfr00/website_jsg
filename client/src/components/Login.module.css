@@ -1,0 +1,61 @@
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    border: solid 1px #1d3b1c;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 5px;
+}
+
+input {
+    height: 30px;
+    border-radius: 0;
+    border: #1d3b1c solid 1px;
+    padding: 0 10px;
+}
+
+input:focus {
+    outline: #2c5729 solid 2px;
+}
+
+label {
+    color: #1d3b1c;
+    font-size: 14px;
+}
+
+.passwordForgot {
+    background: transparent;
+    border: none;
+}
+
+.login {
+    width: 20%;
+    background: #2c5729;
+    color: white;
+    border: none;
+    height: 40px;
+}
+
+.login a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}

@@ -1,0 +1,178 @@
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.p {
+    text-align: justify;
+    width: 90%;
+}
+
+.cartEmpty {
+    margin: 20px 0;
+}
+
+.products {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #2c5729 solid 1px;
+    margin: 10px 0;
+    gap: 25px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.productInfos {
+    display: flex;
+}
+
+.productText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.productText h3 {
+    font-size: 14px;
+    color: #1d3b1c;
+    margin: 0 0 10px 0;
+}
+
+.productText p{
+    align-self: flex-end;
+    text-align: right;
+    margin: 0;
+}
+
+.deleteItem {
+    align-self: flex-end;
+    background: transparent;
+    border: none;
+    color: #2c5729;
+    padding: 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 20px 0 0 0;
+}
+
+.backButton {
+    width: 49%;
+    background: #e5e5e5;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.backButton p {
+    color: black;
+    font-size: 16px;
+    text-align: center;
+}
+
+.proceedButton {
+    width: 49%;
+    border: none;
+    background: #2c5729;
+    color: white;
+    font-size: 16px;
+    height: 40px;
+}
+
+.paymentButton {
+    width: 90%;
+    height: 40px;
+    margin: 20px 0 10px 0;
+    background: transparent;
+    border: none;
+    outline: 1px solid #2c5729;
+    color: #2c5729;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.paymentInfos {
+    width: 90%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    border: #2c5729 solid 1px;
+}
+
+.paymentInfosText {
+    font-size: 12px;
+    width: 95%;
+    text-align: justify;
+}
+
+.total {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.total p {
+    text-align: end;
+}
+
+@media (min-width: 750px) {
+    .image img {
+        width: 50%;
+    }
+
+    .paymentButton {
+        font-size: 20px;
+    }
+
+    .paymentInfosText {
+        font-size: 18px;
+    }
+
+    .productText h3 {
+        font-size: 30px;
+    }
+
+    .productText p {
+        font-size: 20px;
+    }
+
+    .deleteItem {
+        font-size: 25px;
+    }
+}
