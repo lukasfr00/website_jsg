@@ -1,0 +1,96 @@
+.teamContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teamImageContainer {
+    width: 100%;
+}
+
+.teamImageContainer img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.teamInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.divide {
+    width: 50%;
+    height: 1px;
+    background: #2c5729;
+    margin-bottom: 20px;
+}
+
+.coachContainer {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coachContact {
+    width: 75%;
+}
+
+.coachImage {
+    width: 25%;
+}
+
+.coachImage img {
+    width: 100%;
+    object-fit: contain;
+}
+
+/*Responsive*/
+
+@media (min-width: 750px){
+
+    h2 {
+        margin: 20px 0;
+    }
+
+    .teamImageContainer img {
+        height: 60vh;
+    }
+
+    .teamInfo {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .teamInfo p {
+        width: 55%;
+        text-align: justify;
+    }
+
+    .divide {
+        width: 1px;
+        height: 25vh;
+    }
+
+    .coachContainer {
+        width: 35%;
+        flex-direction: column;
+    }
+
+    .coachImage {
+        width: 45%;
+    }
+
+    .coachContact {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+}

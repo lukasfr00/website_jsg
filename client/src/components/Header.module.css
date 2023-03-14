@@ -1,0 +1,253 @@
+.header {
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 100%;
+    height: 10vh;
+    padding: 2vh 0;
+    border-bottom: #2c5729 solid 10px;
+    z-index: 100;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 90vw;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.logoContainer img {
+    height: 10vh;
+    object-fit: contain;
+}
+
+.hamburger {
+    position: absolute;
+    right: 0;
+    width: 10vw;
+    max-width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vh;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.hamburgerLine {
+    width: 100%;
+    height: 3px;
+    background: #2c5729;
+    border: #2c5729 solid 1px;
+    border-radius: 25px;
+}
+
+.sideMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background: #2c5729;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hamburgerClose {
+    position: absolute;
+    top: 7.5vh;
+    right: 8%;
+    z-index: 100;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.hamburgerCrossPos{
+    width: 100%;
+    height: 3px;
+    background: white;
+    border: white solid 1px;
+    border-radius: 25px;
+    position: relative;
+    transform: rotate(45deg);
+    margin: -5px;
+}
+
+.hamburgerCrossNeg{
+    width: 100%;
+    height: 3px;
+    background: white;
+    border: white solid 1px;
+    border-radius: 25px;
+    position: relative;
+    transform: rotate(-45deg);
+}
+
+.menu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu .menuLink{
+    text-decoration: none;
+    color: white;
+}
+
+.menu .menuLinkShop{
+    position: relative;
+    text-decoration: none;
+    color: #2c5729;
+    background: white;
+    width: 90%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.menu .menuLinkShop i, .menu .menuLinkActiveShop i {
+    padding-left: 10px;
+}
+
+.menu .menuLinkActive{
+    text-decoration: none;
+    color: white;
+    padding-bottom: 5px;
+    border-bottom: white solid 3px;
+}
+
+.menu .menuLinkActiveShop{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    background: #2c5729;
+    width: 90%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    outline: white solid 3px;
+}
+
+.cartElements {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff4c4c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    right: -10px;
+    top: -10px;
+    font-size: 12px;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    opacity: 0.7;
+    z-index: 30;
+    pointer-events: none;
+}
+
+/*Responsive*/
+
+@media (min-width: 940px){
+    .sideMenu{
+        position: unset;
+        background: transparent;
+        height: 8vh;
+        width: 70%;
+    }
+
+    .menu {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu .menuLink {
+        color: #1d3b1c;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .menu .menuLinkActive {
+        color: #1d3b1c;
+        text-align: center;
+        font-weight: bold;
+        padding: 5px 0;
+        border-bottom: 3px solid #2c5729;
+        margin-bottom: -3px;
+        cursor: pointer;
+    }
+
+    .menu .menuLinkActiveShop {
+        margin: 0;
+        width: 90px;
+        color: white;
+        background: #2c5729;
+        cursor: pointer;
+    }
+
+    .menu .menuLinkShop {
+        margin: 0;
+        width: 90px;
+        color: #1d3b1c;
+        background: transparent;
+        outline: #2c5729 solid 1px;
+        transition: 300ms;
+        cursor: pointer;
+    }
+
+    .cartElements {
+        top: 0;
+        right: 0;
+    }
+
+    .menu .menuLinkActiveShop:hover {
+        color: #1d3b1c;
+        background: transparent;
+        outline: #2c5729 solid 1px;
+        cursor: pointer;
+    }
+
+    .menu .menuLinkShop:hover {
+        color: white;
+        background: #2c5729;
+        border: none;
+    }
+
+    .menu .menuLink:hover {
+        padding-bottom: 5px;
+        transition: 300ms;
+    }
+}

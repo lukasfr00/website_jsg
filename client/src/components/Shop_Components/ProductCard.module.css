@@ -1,0 +1,59 @@
+.card {
+    outline: solid 1px #2c5729;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 90%;
+    object-fit: cover;
+}
+
+.divide {
+    width: 90%;
+    height: 1px;
+    background: #2c5729;
+}
+
+.informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.informations h3 {
+    text-align: center;
+    font-size: 12px;
+    width: 90%;
+}
+
+.informations .priceBG {
+    width: 100%;
+    height: 40px;
+    background: #2c5729;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informations .price {
+    color: white;
+    width: 90%;
+    font-weight: bold;
+    text-align: right;
+}
+
+@media (min-width: 750px) {
+    .card {
+        cursor: pointer;
+    }
+}
